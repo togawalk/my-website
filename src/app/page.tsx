@@ -1,17 +1,28 @@
 import { Divider } from "@/components/divider";
 import { Chip } from "@/components/chip";
-import { GeistMono } from "geist/font/mono";
 import { GitUrlParser } from "@/services/git-url-parser";
 import { skills, projects } from "@/data";
+import { ClipboardCopy } from "@/components/clipboard-copy";
+import { LuMoon } from "react-icons/lu";
 
 export default function Home() {
   return (
     <main>
-      <section className="flex flex-col ">
-        <p className="text-foreground font-medium">Евгений Ефименко</p>
-        <p className="text-foreground-light leading-none font-medium">
-          Full-stack разработчик
-        </p>
+      <section className="flex justify-between">
+        <div>
+          <p className="text-foreground font-medium">Евгений Ефименко</p>
+          <p className="text-foreground-light leading-none font-medium">
+            Full-stack разработчик
+          </p>
+
+        </div>
+        <div>
+          <button
+            className="p-2 rounded border-border-muted border group hover:bg-white/5 transition-all"
+          >
+            <LuMoon className="size-6 text-foreground-light group-hover:text-foreground transition-all" />
+          </button>
+        </div>
       </section>
 
       <section>
@@ -65,11 +76,7 @@ export default function Home() {
           Контакты
         </Divider>
         <div className="font-medium text-foreground-light text-sm flex">
-          <p
-            className={`${GeistMono.className} cursor-pointer hover:text-foreground py-1 px-1`}
-          >
-            evgeny.efimenko@proton.me
-          </p>
+          <ClipboardCopy copyText="evgeny.efimenko@proton.me" />
         </div>
       </section>
     </main>
