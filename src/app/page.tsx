@@ -4,6 +4,7 @@ import { GitUrlParser } from "@/services/git-url-parser";
 import { skills, projects } from "@/data";
 import { ClipboardCopy } from "@/components/clipboard-copy";
 import { LuMoon } from "react-icons/lu";
+import { Section } from "@/components/section";
 
 export default function Home() {
   return (
@@ -14,27 +15,20 @@ export default function Home() {
           <p className="text-foreground-light leading-none font-medium">
             Full-stack разработчик
           </p>
-
         </div>
         <div>
-          <button
-            className="p-2 rounded border-border-muted border group hover:bg-white/5 transition-all"
-          >
+          <button className="p-2 rounded border-border-muted border group hover:bg-white/5 transition-all">
             <LuMoon className="size-6 text-foreground-light group-hover:text-foreground transition-all" />
           </button>
         </div>
       </section>
 
-      <section>
-        <Divider textAlign="center" className="text-base mt-20">
-          Навыки
-        </Divider>
-
-        <div>
+      <Section name="Навыки">
+        <div className="space-y-5">
           {skills.map((category) => {
             return (
               <div>
-                <Divider textAlign="left" className="after:border-transparent">
+                <Divider textAlign="left" className="before:border-transparent">
                   {category.categoryName}
                 </Divider>
                 <ul className="flex gap-2 flex-wrap">
@@ -46,18 +40,15 @@ export default function Home() {
             );
           })}
         </div>
-      </section>
+      </Section>
 
-      <section>
-        <Divider textAlign="center" className="text-base mt-20">
-          Проекты
-        </Divider>
+      <Section name="Проекты" className="px-0">
         <div>
           {projects.map((project) => {
             const urlParser = new GitUrlParser(project.repoUrl);
             const [, username, repository] = urlParser.extractAll();
             return (
-              <div className="-mx-3 flex flex-col rounded-md px-3 no-underline hover:bg-card-hover sm:py-3 cursor-pointer">
+              <div className="flex flex-col px-3 no-underline hover:bg-card-hover py-3 cursor-pointer border-b border-border-muted first:border-t">
                 <p className="font-medium text-sm">
                   <span className="text-foreground-light">{username}/</span>
                   {repository}
@@ -69,16 +60,13 @@ export default function Home() {
             );
           })}
         </div>
-      </section>
+      </Section>
 
-      <section>
-        <Divider textAlign="center" className="text-base mt-20">
-          Контакты
-        </Divider>
+      <Section name="Контакты">
         <div className="font-medium text-foreground-light text-sm flex">
           <ClipboardCopy copyText="evgeny.efimenko@proton.me" />
         </div>
-      </section>
+      </Section>
     </main>
   );
 }
