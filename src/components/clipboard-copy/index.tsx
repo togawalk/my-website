@@ -26,7 +26,7 @@ export function ClipboardCopy({ copyText }: { copyText: string }) {
 
   return (
     <button
-      className={`${GeistMono.className} cursor-pointer hover:text-foreground py-1 px-1 flex gap-2 items-center group`}
+      className={`${GeistMono.className} cursor-pointer hover:text-foreground flex gap-2 items-center group`}
       onClick={handleCopyClick}
     >
       {copyText}

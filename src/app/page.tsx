@@ -3,7 +3,6 @@ import { Chip } from "@/components/chip";
 import { GitUrlParser } from "@/services/git-url-parser";
 import { skills, projects } from "@/data";
 import { ClipboardCopy } from "@/components/clipboard-copy";
-import { LuMoon } from "react-icons/lu";
 import { Section } from "@/components/section";
 import { ModeToggle } from "@/components/mode-toggle";
 
@@ -12,9 +11,9 @@ export default function Home() {
     <main>
       <section className="flex justify-between">
         <div>
-          <p className="text-foreground font-medium">Евгений Ефименко</p>
+          <p className="text-foreground font-medium">Evgeny Efimenko</p>
           <p className="text-foreground-light leading-none font-medium">
-            Full-stack разработчик
+            Full-stack developer
           </p>
         </div>
         <div>
@@ -22,7 +21,7 @@ export default function Home() {
         </div>
       </section>
 
-      <Section name="Навыки">
+      <Section name="Skills">
         <div className="space-y-5">
           {skills.map((category) => {
             return (
@@ -43,7 +42,7 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section name="Проекты" className="px-0">
+      <Section name="Projects" className="px-0">
         <div>
           {projects.map((project) => {
             const urlParser = new GitUrlParser(project.repoUrl);
@@ -63,9 +62,16 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section name="Контакты">
-        <div className="font-medium text-foreground-light text-sm flex">
-          <ClipboardCopy copyText="evgeny.efimenko@proton.me" />
+      <Section name="Contact">
+        <div className="font-medium text-foreground-light text-sm">
+          <div className="border-border-muted border-b pb-4">
+            <p>Email:</p>
+            <ClipboardCopy copyText="evgeny.efimenko@proton.me" />
+          </div>
+          <div className="pt-4">
+            <p>Github:</p>
+            <ClipboardCopy copyText="https://github.com/togawalk" />
+          </div>
         </div>
       </Section>
     </main>
