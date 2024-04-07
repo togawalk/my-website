@@ -44,11 +44,14 @@ export default function Home() {
 
       <Section name="Projects" className="px-0">
         <div>
-          {projects.map((project) => {
+          {projects.map((project, id) => {
             const urlParser = new GitUrlParser(project.repoUrl);
             const [, username, repository] = urlParser.extractAll();
             return (
-              <div className="flex flex-col px-3 no-underline hover:bg-card-hover py-3 cursor-pointer border-b border-border-muted first:border-t">
+              <div
+                key={`project-${id}`}
+                className="flex flex-col px-3 no-underline hover:bg-card-hover py-3 cursor-pointer border-b border-border-muted first:border-t"
+              >
                 <p className="font-medium text-sm">
                   <span className="text-foreground-light">{username}/</span>
                   {repository}
