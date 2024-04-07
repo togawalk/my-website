@@ -5,6 +5,7 @@ import { skills, projects } from "@/data";
 import { ClipboardCopy } from "@/components/clipboard-copy";
 import { Section } from "@/components/section";
 import { ModeToggle } from "@/components/mode-toggle";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -48,7 +49,9 @@ export default function Home() {
             const urlParser = new GitUrlParser(project.repoUrl);
             const [, username, repository] = urlParser.extractAll();
             return (
-              <div
+              <Link
+                target="_blank"
+                href={project.repoUrl}
                 key={`project-${id}`}
                 className="flex flex-col px-3 no-underline hover:bg-card-hover py-3 cursor-pointer border-b border-border-muted first:border-t"
               >
@@ -59,7 +62,7 @@ export default function Home() {
                 <p className="text-sm mt-2 font-medium text-foreground-light">
                   {project.description}
                 </p>
-              </div>
+              </Link>
             );
           })}
         </div>
