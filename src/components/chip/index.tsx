@@ -6,7 +6,7 @@ export interface ChipProps extends React.HTMLAttributes<HTMLDivElement> {
 
 export const Chip = ({ children, className }: ChipProps) => {
   return (
-    <span className="inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-white/[.1] text-white">
+    <span className="inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-black/[.1] dark:bg-white/[.1] text-foreground dark:text-white">
       {children}
     </span>
   );

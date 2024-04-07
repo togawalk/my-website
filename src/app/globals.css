@@ -4,19 +4,30 @@
 
 @layer base {
   :root {
+    --background: 43.85 86.67% 94.12%;
+    --foreground: 192.22 100% 10.59%;
+    --foreground-light: 194.48 14.15% 40.2%;
+
+    --card: 43.85 86.67% 94.12%;
+    --card-foreground: 240 10% 3.9%;
+    --card-foreground-light: 240 4% 46%;
+    --card-hover: 45.6 42.37% 88.43%;
+
+    --radius: 0.5rem;
+    --border-muted: 0, 0%, 0%, 0.1;
+  }
+
+  .dark {
     --background: 300 3% 6%;
     --foreground: 60 6% 93%;
     --foreground-light: 45 5% 69%;
 
-    /* --card: 300 3% 6%; */
     --card: 0 0% 10%;
     --card-foreground: 60 6% 93%;
     --card-foreground-light: 45 5% 69%;
     --card-hover: 60 2% 9%;
 
-    --radius: 0.5rem;
     --border-muted: 0, 0%, 100%, 0.03;
-    /* --border: 182, 100%, 51%, 1; */
   }
 }
 

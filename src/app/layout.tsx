@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { GeistSans } from "geist/font/sans";
+import { ThemeProvider } from "next-themes";
 
 export const metadata: Metadata = {
   title: "Evgeny Efimenko",
@@ -13,11 +14,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={`${GeistSans.className} bg-background text-foreground`}>
-        <div className="mx-auto my-12 max-w-[692px] px-6 md:my-16">
-          {children}
-        </div>
+        <ThemeProvider attribute="class" defaultTheme="dark">
+          <div className="mx-auto my-12 max-w-[692px] px-6 md:my-16">
+            {children}
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );
