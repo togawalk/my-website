@@ -6,10 +6,12 @@ import { ClipboardCopy } from "@/components/clipboard-copy";
 import { Section } from "@/components/section";
 import { ModeToggle } from "@/components/mode-toggle";
 import Link from "next/link";
+import { ScrollIndicator } from "@/components/scroll-indicator";
 
 export default function Home() {
   return (
     <main>
+      <ScrollIndicator />
       <section className="flex justify-between">
         <div>
           <p className="text-foreground font-medium">Evgeny Efimenko</p>
