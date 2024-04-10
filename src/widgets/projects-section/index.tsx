@@ -27,11 +27,12 @@ export const ProjectsSection = () => {
               transition={{ duration: config.animation.TRANSITION_DURATION }}
               variants={config.animation.VARIANTS}
               key={`project-${id}`}
+              className="first:border-t border-b border-border-muted"
             >
               <Link
                 target="_blank"
                 href={project.repoUrl}
-                className="flex flex-col px-3 no-underline hover:bg-card-hover py-3 cursor-pointer border-b border-border-muted first:border-t"
+                className="flex flex-col px-3 no-underline hover:bg-card-hover py-3 cursor-pointer"
               >
                 <p className="font-medium text-sm">
                   <span className="text-foreground-light">{username}/</span>
