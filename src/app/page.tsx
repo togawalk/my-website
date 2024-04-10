@@ -1,8 +1,8 @@
 import { ModeToggle } from "@/components/mode-toggle";
 import { ScrollIndicator } from "@/components/scroll-indicator";
 import { SkillsSection } from "@/widgets/skill-section";
-import { ProjectsSection } from "@/widgets/projects-section";
 import { ContactSection } from "@/widgets/contact-section";
+import { ProjectsSection } from "@/widgets/projects-section";
 
 export default function Home() {
   return (

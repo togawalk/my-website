@@ -1,4 +1,6 @@
-export const projects = [
+import { Project } from "@/shared/types";
+
+export const projects: Project[] = [
   {
     repoUrl: "https://github.com/togawalk/nextjs-analytics-dashboard",
     description: "",
