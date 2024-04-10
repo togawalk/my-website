@@ -18,7 +18,7 @@ const dividerVariants = cva(
     defaultVariants: {
       textAlign: "center",
     },
-  },
+  }
 );
 
 export interface DividerProps

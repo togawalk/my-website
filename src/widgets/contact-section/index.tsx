@@ -7,14 +7,14 @@ import { config } from "@/shared/config";
 export const ContactSection = () => {
   return (
     <Section name="Contact">
-      <div className="font-medium text-foreground-light text-sm">
+      <div className="text-sm font-medium text-foreground-light">
         <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
           transition={{ duration: config.animation.TRANSITION_DURATION }}
           variants={config.animation.VARIANTS}
-          className="border-border-muted border-b pb-4"
+          className="border-b border-border-muted pb-4"
         >
           <p>Email:</p>
           <ClipboardCopy copyText="evgeny.efimenko@proton.me" />

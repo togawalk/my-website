@@ -9,15 +9,15 @@ export const ModeToggle = () => {
     <>
       <button
         onClick={() => setTheme("light")}
-        className="hidden dark:inline p-2 rounded border-border-muted border group hover:bg-white/5 transition-all"
+        className="group hidden rounded border border-border-muted p-2 transition-all hover:bg-white/5 dark:inline"
       >
-        <LuMoon className="size-6 text-foreground-light group-hover:text-foreground transition-all" />
+        <LuMoon className="size-6 text-foreground-light transition-all group-hover:text-foreground" />
       </button>
       <button
         onClick={() => setTheme("dark")}
-        className="dark:hidden p-2 rounded border-border-muted border group hover:bg-white/5 transition-all"
+        className="group rounded border border-border-muted p-2 transition-all hover:bg-white/5 dark:hidden"
       >
-        <LuSun className="size-6 text-foreground-light group-hover:text-foreground transition-all" />
+        <LuSun className="size-6 text-foreground-light transition-all group-hover:text-foreground" />
       </button>
     </>
   );

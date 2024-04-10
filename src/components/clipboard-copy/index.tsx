@@ -26,7 +26,7 @@ export function ClipboardCopy({ copyText }: { copyText: string }) {
 
   return (
     <button
-      className={`${GeistMono.className} cursor-pointer hover:text-foreground flex gap-2 items-center group`}
+      className={`${GeistMono.className} group flex cursor-pointer items-center gap-2 hover:text-foreground`}
       onClick={handleCopyClick}
     >
       {copyText}
@@ -34,7 +34,7 @@ export function ClipboardCopy({ copyText }: { copyText: string }) {
         {isCopied ? (
           <LuCheck className="size-4 text-lime-500" />
         ) : (
-          <LuClipboard className="size-4 group-hover:rotate-6 transition-transform" />
+          <LuClipboard className="size-4 transition-transform group-hover:rotate-6" />
         )}
       </span>
     </button>

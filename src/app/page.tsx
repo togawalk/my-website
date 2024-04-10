@@ -10,8 +10,8 @@ export default function Home() {
       <ScrollIndicator />
       <section className="flex justify-between">
         <div>
-          <p className="text-foreground font-medium">Evgeny Efimenko</p>
-          <p className="text-foreground-light leading-none font-medium">
+          <p className="font-medium text-foreground">Evgeny Efimenko</p>
+          <p className="font-medium leading-none text-foreground-light">
             Full-stack developer
           </p>
         </div>

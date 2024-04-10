@@ -9,11 +9,11 @@ export const Section = ({ children, className, name }: SectionProps) => {
   return (
     <section
       className={cn(
-        "border-border-muted my-12 border rounded-xl py-4 px-4 relative",
-        className,
+        "relative my-12 rounded-xl border border-border-muted px-4 py-4",
+        className
       )}
     >
-      <h2 className="absolute top-[-0.5rem] bg-background px-3 leading-none text-foreground-light font-medium -translate-x-1/2 left-1/2">
+      <h2 className="absolute left-1/2 top-[-0.5rem] -translate-x-1/2 bg-background px-3 font-medium leading-none text-foreground-light">
         {name}
       </h2>
       {children}

@@ -11,18 +11,18 @@ export const ProjectDetails = ({ project }: { project: Project }) => {
     <motion.div
       transition={{ duration: config.animation.TRANSITION_DURATION }}
       variants={config.animation.VARIANTS}
-      className="first:border-t border-b border-border-muted"
+      className="border-b border-border-muted first:border-t"
     >
       <Link
         target="_blank"
         href={project.repoUrl}
-        className="flex flex-col px-3 no-underline hover:bg-card-hover py-3 cursor-pointer"
+        className="flex cursor-pointer flex-col px-3 py-3 no-underline hover:bg-card-hover"
       >
-        <p className="font-medium text-sm">
+        <p className="text-sm font-medium">
           <span className="text-foreground-light">{username}/</span>
           {repository}
         </p>
-        <p className="text-sm mt-2 font-medium text-foreground-light">
+        <p className="mt-2 text-sm font-medium text-foreground-light">
           {project.description}
         </p>
       </Link>

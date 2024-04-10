@@ -25,7 +25,7 @@ export const ScrollIndicator = () => {
     showScrollIndicator && (
       <motion.div
         style={{ scaleX: scaleX }}
-        className="z-50 bg-lime-500 fixed top-0 left-0 right-0 h-px origin-left"
+        className="fixed left-0 right-0 top-0 z-50 h-px origin-left bg-lime-500"
       />
     )
   );

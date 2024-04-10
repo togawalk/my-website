@@ -14,7 +14,7 @@ export const SkillsSection = () => {
               <Divider textAlign="left" className="before:border-transparent">
                 {category.categoryName}
               </Divider>
-              <ul className="flex gap-2 flex-wrap">
+              <ul className="flex flex-wrap gap-2">
                 {category.technologies.map((technology, id) => {
                   return (
                     <Chip key={`${technology}-${id}`}>{technology.name}</Chip>
