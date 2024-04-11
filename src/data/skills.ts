@@ -1,4 +1,6 @@
-export const skills = [
+import { SkillCategory } from "@/shared/types";
+
+export const skillCategory: SkillCategory[] = [
   {
     id: "backend",
     categoryName: "Backend",

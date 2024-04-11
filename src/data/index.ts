@@ -1,2 +1,2 @@
 export { projects } from "./projects";
-export { skills } from "./skills";
+export { skillCategory } from "./skills";

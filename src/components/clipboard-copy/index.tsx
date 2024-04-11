@@ -3,22 +3,21 @@
 import { GeistMono } from "geist/font/mono";
 import { useState } from "react";
 import { LuCheck, LuClipboard } from "react-icons/lu";
+import { copyTextToClipboard } from "@/shared/utils";
 
 export function ClipboardCopy({ copyText }: { copyText: string }) {
   const [isCopied, setIsCopied] = useState(false);
 
-  async function copyTextToClipboard(text: string) {
-    return await navigator.clipboard.writeText(text);
-  }
+  const handleCopySuccess = () => {
+    setIsCopied(true);
+    setTimeout(() => {
+      setIsCopied(false);
+    }, 1500);
+  };
 
   const handleCopyClick = () => {
     copyTextToClipboard(copyText)
-      .then(() => {
-        setIsCopied(true);
-        setTimeout(() => {
-          setIsCopied(false);
-        }, 1500);
-      })
+      .then(handleCopySuccess)
       .catch((err) => {
         console.log(err);
       });
